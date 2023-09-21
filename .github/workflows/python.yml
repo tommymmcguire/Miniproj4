@@ -1,24 +1,31 @@
-name: Python CI
-
+name: Test workflow for Python template
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7,3.8,3.9]
+        python-version: [3.8, 3.9, 3.11]
     steps:
-      - uses: actions/checkout@v3
-      - name: set up Python ${{ matrix.python-version }} 
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }} 
-      - name: install packages
-        run: make install
-      - name: lint
-        run: make lint
-      - name: test
-        run: make test
-      - name: format
-        run: make format
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Create virtual env
+      run: |
+        make env
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Format code
+      run: |
+        make format
+    - name: Lint with pylint
+      run: |
+        make lint
+    - name: Test with unittest and nbval
+      run: |
+        make test
+
+  
