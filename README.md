@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/tommymmcguire/polarsdescript/actions/workflows/python.yml/badge.svg)](https://github.com/tommymmcguire/polarssdescript/actions)
+[![Build Status](https://github.com/tommymmcguire/Miniproj4/actions/workflows/python.yml/badge.svg)](https://github.com/tommymmcguire/Miniproj4/actions)
 
 # This project uses a python template and the Pandas library to perform descriptive statistics for IDS 706. 
 ## In this project I created a function that counted the number of wine ratings (rows) and tested it with a function in test_main.py to assert that the data was correct. Then I calculated the average, median, and standard deviation of the rating of the wines. I added these statistics to a Markdown file named output.md. Finally, I designed a histogram to show the distribution of wine ratings, which is saved as wine_rating.png. 
