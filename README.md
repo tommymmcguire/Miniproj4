@@ -3,7 +3,7 @@
 # Week 4 Mini Project - GitHub Actions Matrix Build 
 
 ## Summary
-In this project I Create a GitHub Actions Matrix Build that tests at least 3 versions of Python. 
+In this project I created a GitHub Actions Matrix Build that tests at least 3 versions of Python. 
 
 ## Coding specifics
   - Main.py
